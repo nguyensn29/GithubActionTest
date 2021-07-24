@@ -5,7 +5,7 @@ It is compiled using Codefresh.
 
 If you are looking for Maven, then see this [example](https://github.com/codefresh-contrib/spring-boot-2-sample-app)
 
-## Create a multi-stage docker image
+## Create a multi-stage docker image 
 
 To compile and package using Docker multi-stage builds
 
