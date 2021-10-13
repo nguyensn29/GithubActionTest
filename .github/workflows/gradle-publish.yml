@@ -16,5 +16,5 @@ jobs:
       run: |
           curl --fail --request GET https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls
     - name: Print github ref
-      run: echo ${{ github.base_ref }}  ${{ github.ref }}
+      run: echo ${{ github.base_ref }}
     
