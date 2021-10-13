@@ -26,5 +26,8 @@ jobs:
     - name: Build with Gradle
       run: gradle build
     - name: Create Pull Request
-    - run: curl -X GET -k -i 'https://api.github.com/repos/nguyensn29/GithubActionTest/pulls' --header "Authorization: Bearer ${{ secrets.TOKEN }}"
+      run: |
+          curl --fail --request POST --header "Authorization: Bearer $USER_TOKEN" --url "https://api.github.com/repos/nguyensn29/GithubActionTest/pulls"
+      env:
+          USER_TOKEN: ${{ secrets.TOKEN }}
 
