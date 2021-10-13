@@ -14,4 +14,4 @@ jobs:
     steps:
     - name: Create Pull Request
       run: |
-          curl --fail --request GET https://google.com
+          curl --fail --request GET https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls
