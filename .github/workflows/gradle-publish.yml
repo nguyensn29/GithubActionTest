@@ -12,11 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Create Pull Request test
+    - name: get Pull Request
       run: |
           curl --fail --request GET https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls
     - name: Dump GitHub context
       env:
         GITHUB_CONTEXT: ${{ toJSON(github) }}
       run: echo "$GITHUB_CONTEXT"
-    
+    - name: get Pull Request
+      run: |
+          curl --fail --request POST https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls \
+           -d '{"head":${{ github.ref_name }},"base":"master"}'
