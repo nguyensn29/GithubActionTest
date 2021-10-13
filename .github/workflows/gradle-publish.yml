@@ -22,4 +22,4 @@ jobs:
     - name: get Pull Request
       run: |
           curl --fail --request POST https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls \
-           -d '{"head":${{ github.ref_name }},"base":"master"}'
+           -d '{"head":${{ github.ref_name }},"base":"master"}' -H "Accept: application/vnd.github.v3+json" 
