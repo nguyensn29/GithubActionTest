@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Create Pull Request
+    - name: Create Pull Request test
       run: |
           curl --fail --request GET https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls
