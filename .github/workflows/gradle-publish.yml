@@ -26,5 +26,5 @@ jobs:
     - name: Build with Gradle
       run: gradle build
     - name: Create Pull Request
-    - run: curl -X GET -k -i 'https://api.github.com/repos/nguyensn29/GithubActionTest/pulls'
+    - run: curl -X GET -k -i 'https://api.github.com/repos/nguyensn29/GithubActionTest/pulls' --header "Authorization: Bearer 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"
 
