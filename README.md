@@ -1,4 +1,4 @@
-# Gradle Docker Codefresh example
+# Gradle Docker Codefresh example update
 
 This is an example Java application that uses Spring Boot 2, Gradle and Docker
 It is compiled using Codefresh.
