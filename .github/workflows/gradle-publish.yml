@@ -22,4 +22,4 @@ jobs:
     - name: get Pull Request
       run: |
           curl --fail --request POST https://x-access-token:${{ secrets.TOKEN }}@api.github.com/repos/nguyensn29/GithubActionTest/pulls \
-           -d '{"head":"nguyensn29-patch-9","base":"main", "title":"pull request for patch 9", "body:"pull request for patch 9"}' -H "Accept: application/vnd.github.v3+json" 
+           -d '{"head":"${{ github.ref_name }}","base":"main"}' -H "Accept: application/vnd.github.v3+json" 
